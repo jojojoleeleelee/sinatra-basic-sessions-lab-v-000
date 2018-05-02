@@ -12,6 +12,7 @@ class App < Sinatra::Base
   end
 
   post '/checkout' do
+    @session = :session_secret << params
     binding.pry
     erb :checkout
   end
